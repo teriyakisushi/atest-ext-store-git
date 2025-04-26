@@ -1,5 +1,7 @@
 # This is an example .goreleaser.yml file with some sensible defaults.
 # Make sure to check the documentation at https://goreleaser.com
+version: 2
+
 before:
   hooks:
     # You may remove this if you don't use go modules.
@@ -7,8 +9,8 @@ before:
 builds:
   - env:
       - CGO_ENABLED=0
-    id: atest-store-git
-    binary: atest-store-git
+    id: atest-ext-store-git
+    binary: atest-ext-store-git
     main: ./main.go
     goos:
       - linux
@@ -21,15 +23,19 @@ builds:
       - -s
 archives:
   - name_template: "{{ .Binary }}-{{ .Os }}-{{ .Arch }}"
-    builds:
+    # builds:
+    #   - atest-ext-store-git
+    ids:
       - atest-ext-store-git
+    format: tar.gz
     format_overrides:
       - goos: windows
         format: zip
     files:
       - README.md
 checksum:
-  name_template: 'checksums.txt'
+  # name_template: 'checksums.txt'
+  user_git_short_hash: true
 snapshot:
   name_template: "{{ incpatch .Version }}-next"
 changelog:
