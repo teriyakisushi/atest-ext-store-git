@@ -1,4 +1,4 @@
-name: Test GoReleaser
+name: RC GoReleaser
 
 on:
   push:
