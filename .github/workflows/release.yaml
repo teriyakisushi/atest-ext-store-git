@@ -6,6 +6,7 @@ on:
       - '*'
     branches:
       - master
+      - sleepfox
 
 env:
   REGISTRY: ghcr.io
