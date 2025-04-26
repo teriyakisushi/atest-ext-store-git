@@ -34,8 +34,7 @@ archives:
     files:
       - README.md
 checksum:
-  # name_template: 'checksums.txt'
-  user_git_short_hash: true
+  name_template: 'checksums.txt
 snapshot:
   name_template: "{{ incpatch .Version }}-next"
 changelog:
