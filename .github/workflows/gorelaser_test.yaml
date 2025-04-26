@@ -27,6 +27,6 @@ jobs:
         uses: goreleaser/goreleaser-action@v2.9.1
         with:
           version: latest
-          args: release --skip-publish --snapshot
+          args: release --snapshot
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
