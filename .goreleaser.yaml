@@ -29,11 +29,11 @@ archives:
       - atest-ext-store-git
     format_overrides:
       - goos: windows
-        format: zip
+        formats: ['zip']
       - goos: linux
-        format: tar.gz
+        format: ['tar.gz']
       - goos: darwin
-        format: tar.gz
+        format: ['tar.gz']
     files:
       - README.md
 checksum:
