@@ -31,9 +31,9 @@ archives:
       - goos: windows
         formats: ['zip']
       - goos: linux
-        format: ['tar.gz']
+        formats: ['tar.gz']
       - goos: darwin
-        format: ['tar.gz']
+        formats: ['tar.gz']
     files:
       - README.md
 checksum:
