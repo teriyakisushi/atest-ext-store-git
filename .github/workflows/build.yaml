@@ -33,7 +33,7 @@ jobs:
         with:
           github_token: ${{ secrets.GH_PUBLISH_SECRETS }}
           version: v2.8.0
-          args: release --skip-publish --clean --snapshot
+          args: release --clean --snapshot
 
   BuildImage:
     runs-on: ubuntu-22.04
